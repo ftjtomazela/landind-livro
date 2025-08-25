@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conexão Divina - Um Guia Completo para se Conectar com Deus</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><radialGradient id="a" cx="50%" cy="50%"><stop offset="0%" stop-color="white" stop-opacity="0.1"/><stop offset="100%" stop-color="white" stop-opacity="0"/></radialGradient></defs><circle cx="20" cy="20" r="2" fill="url(%23a)"><animate attributeName="opacity" values="0;1;0" dur="3s" repeatCount="indefinite"/></circle><circle cx="80" cy="30" r="1.5" fill="url(%23a)"><animate attributeName="opacity" values="0;1;0" dur="4s" repeatCount="indefinite" begin="1s"/></circle><circle cx="40" cy="70" r="1" fill="url(%23a)"><animate attributeName="opacity" values="0;1;0" dur="2s" repeatCount="indefinite" begin="2s"/></circle></svg>') center/cover;
+            animation: float 20s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(180deg); }
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .hero-text {
+            color: white;
+        }
+
+        .hero-text h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            line-height: 1.2;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            animation: slideInLeft 1s ease-out;
+        }
+
+        .hero-text .subtitle {
+            font-size: 1.4rem;
+            margin-bottom: 30px;
+            opacity: 0.95;
+            animation: slideInLeft 1s ease-out 0.2s both;
+        }
+
+        .hero-text .description {
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+            animation: slideInLeft 1s ease-out 0.4s both;
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .book-showcase {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: slideInRight 1s ease-out 0.6s both;
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .book-3d {
+            width: 300px;
+            height: 400px;
+            background: linear-gradient(145deg, #f8f9fa, #e9ecef);
+            border-radius: 15px;
+            position: relative;
+            transform: perspective(1000px) rotateY(-15deg) rotateX(5deg);
+            box-shadow: 
+                20px 20px 60px rgba(0,0,0,0.3),
+                inset 5px 5px 10px rgba(255,255,255,0.8);
+            transition: transform 0.3s ease;
+            animation: bookFloat 6s ease-in-out infinite;
+        }
+
+        @keyframes bookFloat {
+            0%, 100% { transform: perspective(1000px) rotateY(-15deg) rotateX(5deg) translateY(0px); }
+            50% { transform: perspective(1000px) rotateY(-15deg) rotateX(5deg) translateY(-10px); }
+        }
+
+        .book-3d:hover {
+            transform: perspective(1000px) rotateY(-10deg) rotateX(2deg) scale(1.05);
+        }
+
+        .book-cover {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .book-cover h2 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .book-cover .book-subtitle {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            margin-bottom: 20px;
+        }
+
+        .divine-symbol {
+            width: 80px;
+            height: 80px;
+            margin: 20px 0;
+            opacity: 0.8;
+            animation: pulse 3s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 0.8; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.1); }
+        }
+
+        .cta-button {
+            background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+            color: white;
+            padding: 18px 40px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 25px rgba(255,107,107,0.3);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            animation: ctaPulse 2s ease-in-out infinite;
+        }
+
+        @keyframes ctaPulse {
+            0%, 100% { box-shadow: 0 8px 25px rgba(255,107,107,0.3); }
+            50% { box-shadow: 0 12px 35px rgba(255,107,107,0.5); }
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 35px rgba(255,107,107,0.4);
+        }
+
+        .benefits {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .benefit-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .benefit-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+
+        .benefit-icon {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 20px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: white;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            border-radius: 2px;
+        }
+
+        .testimonials {
+            padding: 100px 0;
+            background: #fff;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        .testimonial {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 15px;
+            border-left: 5px solid #667eea;
+            transition: transform 0.3s ease;
+        }
+
+        .testimonial:hover {
+            transform: translateY(-5px);
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 20px;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            color: #333;
+        }
+
+        .final-cta {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            text-align: center;
+            color: white;
+        }
+
+        .final-cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .final-cta p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+
+        .price {
+            font-size: 3rem;
+            font-weight: 700;
+            margin: 30px 0;
+            color: #fff;
+        }
+
+        .price .currency {
+            font-size: 1.5rem;
+            vertical-align: top;
+        }
+
+        .old-price {
+            text-decoration: line-through;
+            opacity: 0.6;
+            font-size: 1.5rem;
+            margin-right: 15px;
+        }
+
+        .checkout-form {
+            max-width: 400px;
+            margin: 40px auto;
+            background: rgba(255,255,255,0.1);
+            padding: 30px;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #fff;
+            font-size: 0.9rem;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid rgba(255,255,255,0.2);
+            border-radius: 10px;
+            font-size: 1rem;
+            background: rgba(255,255,255,0.9);
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: #ff6b6b;
+            box-shadow: 0 0 0 3px rgba(255,107,107,0.2);
+            transform: translateY(-2px);
+        }
+
+        .checkout-btn {
+            width: 100%;
+            font-size: 1.2rem;
+            padding: 18px 20px;
+            margin-top: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .btn-icon {
+            font-size: 1.3rem;
+        }
+
+        .payment-security {
+            margin-top: 30px;
+        }
+
+        .payment-methods {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 15px;
+        }
+
+        .payment-method {
+            background: rgba(255,255,255,0.1);
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .loading {
+            display: none;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .loading.show {
+            display: block;
+        }
+
+        .spinner {
+            border: 3px solid rgba(255,255,255,0.3);
+            border-radius: 50%;
+            border-top: 3px solid #fff;
+            width: 30px;
+            height: 30px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 15px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        @media (max-width: 768px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 40px;
+            }
+            
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+            
+            .book-3d {
+                width: 250px;
+                height: 320px;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Conexão Divina</h1>
+                    <p class="subtitle">Um Guia Completo para se Conectar com Deus e Receber Respostas</p>
+                    <p class="description">Descubra os segredos milenares para desenvolver uma conexão profunda e transformadora com o divino. Aprenda técnicas poderosas de oração, meditação e contemplação que irão revolucionar sua vida espiritual.</p>
+                    <a href="#comprar" class="cta-button">Quero Minha Transformação Agora</a>
+                </div>
+                <div class="book-showcase">
+                    <div class="book-3d">
+                        <div class="book-cover">
+                            <h2>Conexão Divina</h2>
+                            <p class="book-subtitle">Um Guia Completo para se Conectar com Deus</p>
+                            <svg class="divine-symbol" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 0l3.09 6.26L22 7.27l-5 4.87 1.18 6.88L12 16.18l-6.18 2.84L7 12.14 2 7.27l6.91-1.01L12 0z"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="benefits">
+        <div class="container">
+            <h2 class="section-title">O Que Você Vai Descobrir</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">🙏</div>
+                    <h3>Oração Transformadora</h3>
+                    <p>Aprenda técnicas avançadas de oração que criam uma ponte direta com o divino, permitindo comunicação clara e respostas precisas.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">✨</div>
+                    <h3>Sinais e Sincronicidades</h3>
+                    <p>Descubra como reconhecer e interpretar os sinais que Deus envia constantemente, transformando coincidências em orientações divinas.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🧘</div>
+                    <h3>Meditação Sagrada</h3>
+                    <p>Domine práticas meditativas que elevam sua consciência e criam um estado receptivo para receber orientação divina.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">💫</div>
+                    <h3>Intuição Espiritual</h3>
+                    <p>Desenvolva sua intuição sagrada e aprenda a distinguir entre sua voz interior e a voz divina que o guia.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">📖</div>
+                    <h3>Estudos Bíblicos Profundos</h3>
+                    <p>Mergulhe em interpretações reveladora das escrituras que iluminarão seu caminho espiritual com nova clareza.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🌟</div>
+                    <h3>Propósito de Vida</h3>
+                    <p>Descubra sua missão divina na Terra e como alinhar suas ações com o plano superior para sua vida.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">Transformações Reais</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial">
+                    <p class="testimonial-text">"Depois de ler Conexão Divina, minha vida espiritual nunca mais foi a mesma. Finalmente consegui estabelecer uma comunicação clara com Deus e receber as respostas que tanto buscava."</p>
+                    <p class="testimonial-author">— Maria Santos, São Paulo</p>
+                </div>
+                <div class="testimonial">
+                    <p class="testimonial-text">"Este livro chegou no momento exato que eu precisava. As técnicas de oração e meditação me ajudaram a encontrar paz interior e direcionamento divino em momentos difíceis."</p>
+                    <p class="testimonial-author">— João Silva, Rio de Janeiro</p>
+                </div>
+                <div class="testimonial">
+                    <p class="testimonial-text">"Incrível como as práticas ensinadas no livro me ajudaram a reconhecer os sinais de Deus no meu dia a dia. Agora vivo com mais propósito e conexão espiritual."</p>
+                    <p class="testimonial-author">— Ana Costa, Belo Horizonte</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="final-cta" id="comprar">
+        <div class="container">
+            <h2>Comece Sua Jornada Espiritual Hoje</h2>
+            <p>Não deixe para amanhã a transformação que pode começar agora. Sua conexão com o divino está a um clique de distância.</p>
+            
+            <div class="price">
+                <span class="old-price">R$ 97,00</span>
+                <span class="currency">R$</span>9<span style="font-size: 2rem;">,00</span>
+            </div>
+            
+            <!-- Formulário de Checkout Mercado Pago -->
+            <div class="checkout-form">
+                <form id="mercadoPagoForm" onsubmit="processarPagamento(event)">
+                    <div class="form-group">
+                        <label for="email">Seu melhor e-mail:</label>
+                        <input type="email" id="email" name="email" required placeholder="seuemail@exemplo.com">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="nome">Nome completo:</label>
+                        <input type="text" id="nome" name="nome" required placeholder="Seu nome completo">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="telefone">WhatsApp (opcional):</label>
+                        <input type="tel" id="telefone" name="telefone" placeholder="(11) 99999-9999">
+                    </div>
+                    
+                    <button type="submit" class="cta-button checkout-btn">
+                        <span class="btn-icon">🔒</span>
+                        Finalizar Compra 
+                    </button>
+                </form>
+            </div>
+            
+            <div class="payment-security">
+                <p style="margin: 20px 0; opacity: 0.9; font-size: 1rem;">
+                    <strong>🔐 Pagamento 100% Seguro </strong>
+                </p>
+                <div class="payment-methods">
+                    <span class="payment-method">💳 Cartão de Crédito</span>
+                    <span class="payment-method">🏦 PIX</span>
+                    <span class="payment-method">📱 Carteiras Digitais</span>
+                </div>
+            </div>
+            
+            <p style="margin-top: 30px; opacity: 0.8; font-size: 0.9rem;">
+                ✅ Acesso imediato após a compra<br>
+                ✅ Garantia de 30 dias<br>
+                ✅ Formato PDF compatível com todos os dispositivos<br>
+                ✅ Suporte via WhatsApp
+            </p>
+        </div>
+    </section>
+
+    <script>
+        // Smooth scrolling para links internos
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Animação de entrada para elementos quando entram na viewport
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observar cartões de benefícios
+        document.querySelectorAll('.benefit-card').forEach((card, index) => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`;
+            observer.observe(card);
+        });
+
+        // Observar depoimentos
+        document.querySelectorAll('.testimonial').forEach((testimonial, index) => {
+            testimonial.style.opacity = '0';
+            testimonial.style.transform = 'translateY(30px)';
+            testimonial.style.transition = `opacity 0.6s ease ${index * 0.2}s, transform 0.6s ease ${index * 0.2}s`;
+            observer.observe(testimonial);
+        });
+
+        // Efeito de partículas flutuantes no hero
+        function createFloatingParticle() {
+            const particle = document.createElement('div');
+            particle.style.position = 'absolute';
+            particle.style.width = Math.random() * 4 + 2 + 'px';
+            particle.style.height = particle.style.width;
+            particle.style.background = 'rgba(255,255,255,0.3)';
+            particle.style.borderRadius = '50%';
+            particle.style.left = Math.random() * 100 + '%';
+            particle.style.top = '100%';
+            particle.style.pointerEvents = 'none';
+            particle.style.animation = `floatUp ${Math.random() * 3 + 4}s linear forwards`;
+            
+            document.querySelector('.hero').appendChild(particle);
+            
+            setTimeout(() => {
+                particle.remove();
+            }, 7000);
+        }
+
+        // Adicionar keyframes para partículas flutuantes
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes floatUp {
+                to {
+                    transform: translateY(-100vh) rotate(360deg);
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+
+        // Criar partículas periodicamente
+        setInterval(createFloatingParticle, 2000);
+
+        // Função para processar pagamento Mercado Pago
+        function processarPagamento(event) {
+            event.preventDefault();
+            
+            const form = document.getElementById('mercadoPagoForm');
+            const email = document.getElementById('email').value;
+            const nome = document.getElementById('nome').value;
+            const telefone = document.getElementById('telefone').value;
+            
+            if (!email || !nome) {
+                alert('Por favor, preencha todos os campos obrigatórios.');
+                return;
+            }
+            
+            // Mostrar loading
+            const submitBtn = form.querySelector('button[type="submit"]');
+            const originalText = submitBtn.innerHTML;
+            submitBtn.innerHTML = '<div class="spinner"></div>Processando...';
+            submitBtn.disabled = true;
+            
+            // Simular processamento (aqui você integraria com a API do Mercado Pago)
+            setTimeout(() => {
+                // Dados do produto
+                const dadosProduto = {
+                    title: 'Ebook: Conexão Divina - Um Guia Completo para se Conectar com Deus',
+                    price: 47.00,
+                    quantity: 1,
+                    currency: 'BRL',
+                    buyer_email: email,
+                    buyer_name: nome,
+                    buyer_phone: telefone
+                };
+                
+                // SUBSTITUA ESTA URL pela sua URL de checkout do Mercado Pago
+                // Exemplo: https://www.mercadopago.com.br/checkout/v1/redirect?pref_id=SEU_PREFERENCE_ID
+                const urlCheckoutMercadoPago = criarLinkMercadoPago(dadosProduto);
+                
+                // Redirecionar para o Mercado Pago
+                window.location.href = urlCheckoutMercadoPago;
+                
+            }, 2000);
+        }
+        
+        // Função para criar link do Mercado Pago
+        function criarLinkMercadoPago(dados) {
+            // IMPORTANTE: Esta é uma implementação simplificada
+            // Em produção, você deve criar a preferência no seu backend
+            
+            // Para teste, vamos usar uma URL de exemplo
+            // SUBSTITUA por sua URL real do Mercado Pago
+            const baseUrl = 'https://www.mercadopago.com.br/checkout/v1/redirect';
+            
+            // Parâmetros básicos (em produção, isso seria feito no backend)
+            const params = new URLSearchParams({
+                // Substitua pelos seus dados reais
+                'back_urls[success]': window.location.origin + '/sucesso.html',
+                'back_urls[failure]': window.location.origin + '/erro.html',
+                'back_urls[pending]': window.location.origin + '/pendente.html',
+                'auto_return': 'approved',
+                'external_reference': 'EBOOK_CONEXAO_DIVINA_' + Date.now()
+            });
+            
+            // ATENÇÃO: Para implementação real, você precisa:
+            // 1. Criar um endpoint no seu backend
+            // 2. No backend, usar a SDK do Mercado Pago para criar a preferência
+            // 3. Retornar a URL de checkout
+            
+            // Por enquanto, redirecionamos para uma página de instruções
+            return criarUrlInstrucoes(dados);
+        }
+        
+        // Função temporária para mostrar instruções de integração
+        function criarUrlInstrucoes(dados) {
+            // Em ambiente de desenvolvimento, mostrar instruções
+            alert(`
+Dados coletados com sucesso!
+
+Nome: ${dados.buyer_name}
+Email: ${dados.buyer_email}
+Telefone: ${dados.buyer_phone || 'Não informado'}
+Produto: ${dados.title}
+Valor: R$ ${dados.price.toFixed(2)}
+
+
+            `);
+            
+            // Retornar URL de exemplo (substitua pela sua)
+            return 'https://pay.kiwify.com.br/jM5xuyl';
+        }
+        
+        // Validação em tempo real dos campos
+        document.getElementById('email').addEventListener('blur', function() {
+            const email = this.value;
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            
+            if (email && !emailRegex.test(email)) {
+                this.style.borderColor = '#ff6b6b';
+                this.style.backgroundColor = '#ffe6e6';
+            } else {
+                this.style.borderColor = 'rgba(255,255,255,0.2)';
+                this.style.backgroundColor = 'rgba(255,255,255,0.9)';
+            }
+        });
+        
+        // Máscara para telefone
+        document.getElementById('telefone').addEventListener('input', function() {
+            let value = this.value.replace(/\D/g, '');
+            
+            if (value.length <= 11) {
+                value = value.replace(/(\d{2})(\d{5})(\d{4})/, '($1) $2-$3');
+                if (value.length < 14) {
+                    value = value.replace(/(\d{2})(\d{4})(\d{4})/, '($1) $2-$3');
+                }
+            }
+            
+            this.value = value;
+        });
+    </script>
+</body>
+</html>
