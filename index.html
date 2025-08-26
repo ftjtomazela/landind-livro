@@ -470,6 +470,27 @@
                 font-size: 2rem;
             }
         }
+
+        .book-image {
+    width: 300px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 
+        20px 20px 60px rgba(0,0,0,0.3),
+        0 10px 30px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+    animation: bookFloat 6s ease-in-out infinite;
+}
+
+.book-image:hover {
+    transform: scale(1.05) translateY(-5px);
+}
+
+@keyframes bookFloat {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+}
     </style>
 </head>
 <body>
@@ -482,17 +503,10 @@
                     <p class="description">Descubra os segredos milenares para desenvolver uma conexão profunda e transformadora com o divino. Aprenda técnicas poderosas de oração, meditação e contemplação que irão revolucionar sua vida espiritual.</p>
                     <a href="#comprar" class="cta-button">Quero Minha Transformação Agora</a>
                 </div>
-                <div class="book-showcase">
-                    <div class="book-3d">
-                        <div class="book-cover">
-                            <h2>Conexão Divina</h2>
-                            <p class="book-subtitle">Um Guia Completo para se Conectar com Deus</p>
-                            <svg class="divine-symbol" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M12 0l3.09 6.26L22 7.27l-5 4.87 1.18 6.88L12 16.18l-6.18 2.84L7 12.14 2 7.27l6.91-1.01L12 0z"/>
-                            </svg>
-                        </div>
-                    </div>
-                </div>
+            <div class="book-showcase">
+    <img src="Conexão Celestial e Harmonia Divina.png" alt="Ebook Conexão Divina - Um Guia Completo para se Conectar com Deus" class="book-image">
+</div>    
+            </div>
             </div>
         </div>
     </section>
